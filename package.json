@@ -1,0 +1,40 @@
+{
+  "name": "grunt-minifykr",
+  "description": "Grunt plugin to concatenate and minify krpano XML files",
+  "version": "0.1.0",
+  "homepage": "",
+  "author": {
+    "name": "Manuel Cabral",
+    "email": "m.cabral@digisfera.pt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org/digisfera/salinas.git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "grunt.js",
+  "bin": "bin/grunt-minifykr",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "minifykr": "0.0.3"
+  }
+}
