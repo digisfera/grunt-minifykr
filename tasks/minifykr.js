@@ -26,16 +26,10 @@ module.exports = function(grunt) {
       else return fileObj;
     });
 
-    grunt.helper('minifykr', filesToMinify);
-  });
-
-  // ==========================================================================
-  // HELPERS
-  // ==========================================================================
-
-  grunt.registerHelper('minifykr', function(filesToMinify) {
     filesToMinify.forEach(function(fileObj) {
+      try {
       minifykr.file(fileObj.inputFile, fileObj.outputFile, fileObj.encrypt);
+      } catch(e) { grunt.fail.fatal("Exception calling minifykr: " + e); }
     });
   });
 
