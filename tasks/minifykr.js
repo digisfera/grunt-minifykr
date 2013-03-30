@@ -18,6 +18,8 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('minifykr', 'Your task description goes here.', function() {
     //grunt.log.write(grunt.helper('minifykr'));
+    var done = this.async();
+
     var filesToMinify = this.data;
     if(!Array.isArray(filesToMinify)) { filesToMinify = [ filesToMinify ]; }
 
@@ -27,9 +29,11 @@ module.exports = function(grunt) {
     });
 
     filesToMinify.forEach(function(fileObj) {
-      try {
-      minifykr.file(fileObj.inputFile, fileObj.outputFile, fileObj.encrypt);
-      } catch(e) { grunt.fail.fatal("Exception calling minifykr: " + e); }
+
+      minifykr.file(fileObj.inputFile, fileObj.outputFile, fileObj.encrypt, fileObj.spriteFile, function(err, success) {
+        if(err) { grunt.fail.fatal("Exception calling minifykr: " + err); }
+        done(err, success);
+      });
     });
   });
 
