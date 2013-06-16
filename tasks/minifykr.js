@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 
     filesToMinify.forEach(function(fileObj) {
 
-      minifykr.file(fileObj.inputFile, fileObj.outputFile, fileObj.encrypt, fileObj.spriteFile, function(err, success) {
+      minifykr.file(fileObj.inputFile, fileObj.outputFile, fileObj.encrypt, function(err, success) {
         if(err) { grunt.fail.fatal("Exception calling minifykr: " + err); }
         done(err, success);
       });
