@@ -23,6 +23,7 @@ grunt.loadNpmTasks('grunt-minifykr');
       test2: [ "main_pt.xml", "main_en.xml" ],
       test3: { inputFile: "main_pt.xml", outputFile: "zzz.xml"},
       test4: { inputFile: "main_pt.xml", outputFile: "zzz.xml", encrypt: false },
+      test4: { inputFile: "main_pt.xml", outputFile: "zzz.xml", minify: false },
       test5: { inputFile: "main_pt.xml", outputFile: "zzz.xml", encrypt: true },
       test6: [ { inputFile: "main_pt.xml", outputFile: "zzz.xml", encrypt: true }, { inputFile: "main_en.xml", outputFile: "zzz_en.xml", encrypt: false } ],
       test7: [ { inputFile: "main_pt.xml" }, { inputFile: "main_en.xml", encrypt: false } ]
