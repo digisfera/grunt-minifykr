@@ -1,7 +1,7 @@
 {
   "name": "grunt-minifykr",
   "description": "Grunt plugin to concatenate and minify krpano XML files",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "homepage": "",
   "author": {
     "name": "Manuel Cabral",
